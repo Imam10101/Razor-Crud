@@ -1,0 +1,71 @@
+﻿@page
+@model MedicineRazor.Pages.MedicineModel
+@{
+    <div class="row">
+    <div class="col-md-6">
+    <form method="post">
+                @if (TempData["m"] != null)
+                {
+                    <div class ="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>  @TempData["m"]</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" 
+                        aria-label="close"></button>
+                    </div>
+                  
+                }
+                <div class="form-group">
+                <Label> Name</Label>
+                <input asp-for="InputMedicine.Name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <Label> Strength</Label>
+                    <input asp-for="InputMedicine.Strength" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <Label> Group</Label>
+                    <input asp-for="InputMedicine.Group" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <Label> Price</Label>
+                    <input asp-for="InputMedicine.Price" class="form-control" />
+                </div>
+                <div>
+                <button class="btn-success mt-3" type="submit">Save</button>
+                </div>
+            </form>
+    </div>
+    <div class="col-md-6">
+    <h1>All Medicine</h1>
+    <table class="table table-bordered">
+    <thead>
+    <tr>
+    <td>Name</td>
+    <td>Strength</td>
+    <td>Group</td>
+    <td>Price</td>
+    </tr>
+    </thead>
+    <tbody>
+                    @foreach(var item in Model.allmedicines)
+                    {
+                        <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Strength</td>
+                        <td>@item.Group</td>
+                        <td>@item.Price</td>
+                        <td>
+                                  <form method="post">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger" formaction="/Medicine?handler=Delete">Delete</button>
+                              </form>
+                            </td>
+                        </tr>
+                    }
+
+    </tbody>
+    </table>
+    
+    </div>
+
+    </div>
+}

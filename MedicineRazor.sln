@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedicineRazor", "MedicineRazor\MedicineRazor.csproj", "{E44CF775-8A46-455A-B871-1C950DDEE6A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E44CF775-8A46-455A-B871-1C950DDEE6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44CF775-8A46-455A-B871-1C950DDEE6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44CF775-8A46-455A-B871-1C950DDEE6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44CF775-8A46-455A-B871-1C950DDEE6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6980F630-5D96-49C0-BC5D-605B81E68074}
+	EndGlobalSection
+EndGlobal
